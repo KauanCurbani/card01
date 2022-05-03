@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #c5c5c5;
+  width: 100%;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  width: 500px;
+  height: 320px;
+  background-color: #2a2f40;
+  border-radius: 15px 5px;
+  box-shadow: 0px 19px 15px 0px rgba(0, 0, 0, 0.1),
+    0px 32px 28px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.left {
+    z-index: 999;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 320px;
+  background: linear-gradient(20deg, #ff6d39, #f54b2d);
+  border-radius: 0 50% 50% 0;
+  box-shadow: inset 0px 0px 23px 8px rgba(0, 0, 0, 0.1),
+    0px 0px 23px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.5s ease;
+}
+.left:hover {
+  width: 450px;
+  border-radius: 0;
+}
+.left img {
+  width: 100%;
+  transform: translateX(55px);
+}
+.left .header {
+  transform: rotate(90deg) translateY(30px);
+  color: #f54b2d;
+  transition: 0.5s ease;
+  opacity: 0;
+  letter-spacing: 05px;
+  text-transform: uppercase;
+}
+.left .header h1{
+ font-size: 28px;
+}
+.left:hover .header {
+  transform: rotate(90deg) translateY(-25px);
+  opacity: 1;
+  letter-spacing: 0;
+}
+.right {
+    position: absolute;
+    left: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  height: 100%;
+  transform: translateX(0);
+  transition: 0.5s ease;
+  padding: 20px 15px;
+}
+
+.right .header-r {
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: space-between;
+}
+.right .header-r .icons {
+  display: flex;
+  flex-wrap: nowrap;
+  color: #f9f9f9;
+  font-size: 20px;
+}
+.header-r .icons ion-icon {
+  margin-left: 15px;
+  transition: .2s ease;
+}
+.header-r .icons ion-icon:hover{
+    color: #f54b2d;
+    transform: translateY(-3px);
+}
+.right .header-r h1 {
+  color: #f54b2d;
+  font-size: 18px;
+  font-weight: 400;
+}
+.desc{
+    color: #f9f9f9;
+}
+.desc h3{
+    color: #f54b2d;
+    letter-spacing: 2px;
+}
+.desc .price{
+    display: flex;
+}
+.desc .price h4:nth-child(1){
+    font-size: 22px;
+    font-weight: 300;
+}
+.desc .price h4:nth-child(2){
+    font-weight: 200;
+    text-decoration: line-through;
+    margin-left: 10px;
+
+}
+.size{
+    display: flex;
+    align-items: center;
+}
+.size button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+/*     outline: 1px solid #f54b2d; */
+    background-color: #2a2f40;
+    border: none;
+    width: 22px;
+    height: 22px;
+    color: #f54b2d;
+    border-radius: 50%;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+.size button:hover{
+    background-color: #f54b2d;
+    color: #2a2f40;
+    transform: translateY(-2px);
+}
+
+.color{
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+.color button{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: none;
+    margin-left: 8px;
+    transition: .3s ease;
+}
+.color button:hover{
+    transform: translateY(-3px);
+}
+.color button.orange{
+ background-color: #f54b2d;
+
+}
+.color button.blue{
+    background-color: #0066ff;    
+}
+.color button.red{
+    background-color: #e02f2f;
+}
+.buy button{
+   width: 120px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2a2f40;
+    border: none;
+    outline: 1px solid #f54b2d;
+    border-radius: 3px;
+    margin-top: 20px;
+    color: #f54b2d;
+    transition: .2s ease;
+}
+.buy button:hover{
+    background-color: #f54b2d;
+    color: #2a2f40;
+}
+.buy button:active{
+    transform: scale(0.9);
+}
+.buy button ion-icon{
+    font-size: 20px;
+    margin-right: 5px;
+}
