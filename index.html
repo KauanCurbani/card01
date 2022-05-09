@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="card">
-        <div class="left">
+        <div class="left" onclick="preview()">
             <img src="nike.webp" alt="">
             <div class="header"><h1>AirMax</h1></div>
         </div>
@@ -48,6 +48,10 @@
             </div>
         </div>
     </div>
+    <script>
+        var product = document.querySelector('.left')
+        product.classList.toggle('preview')
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
